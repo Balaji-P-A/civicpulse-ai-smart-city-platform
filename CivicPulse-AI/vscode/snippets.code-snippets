@@ -1,0 +1,18 @@
+{
+  "CivicPulse Controller": {
+    "prefix": "cp-controller",
+    "body": [
+      "class ${1:ControllerName} {",
+      "  async ${2:method}(req, res) {",
+      "    try {",
+      "      // logic",
+      "      res.status(200).json({ success: true });",
+      "    } catch (error) {",
+      "      res.status(500).json({ error: error.message });",
+      "    }",
+      "  }",
+      "}"
+    ],
+    "description": "Standard CivicPulse API Controller"
+  }
+}
