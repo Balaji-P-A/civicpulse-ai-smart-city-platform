@@ -1,0 +1,28 @@
+name: AI Model Validation
+
+on:
+  push:
+    paths:
+      - "ai-engine/**"
+
+jobs:
+  validate-models:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install AI Dependencies
+        run: |
+          cd ai-engine
+          pip install -r requirements.txt
+
+      - name: Run Model Evaluation
+        run: |
+          cd ai-engine/training
+          python evaluation.py
