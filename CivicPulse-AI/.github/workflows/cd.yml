@@ -1,0 +1,22 @@
+name: CivicPulse CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker Images
+        run: |
+          docker build -t civicpulse-frontend ./frontend
+          docker build -t civicpulse-backend ./backend
+          docker build -t civicpulse-ai ./ai-engine
+
+      - name: Deploy (Simulation)
+        run: |
+          echo "Deploying CivicPulse AI to cloud cluster..."
