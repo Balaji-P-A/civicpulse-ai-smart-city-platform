@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Backend",
+      "type": "shell",
+      "command": "cd backend && npm run dev",
+      "isBackground": true
+    },
+    {
+      "label": "Start Frontend",
+      "type": "shell",
+      "command": "cd frontend && npm run dev",
+      "isBackground": true
+    },
+    {
+      "label": "Start AI Engine",
+      "type": "shell",
+      "command": "cd ai-engine && python api/ai_service.py",
+      "isBackground": true
+    },
+    {
+      "label": "Start CivicPulse (ALL)",
+      "dependsOn": [
+        "Start Backend",
+        "Start Frontend",
+        "Start AI Engine"
+      ]
+    }
+  ]
+}
