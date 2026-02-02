@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Backend – Node API",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/backend/server.js",
+      "envFile": "${workspaceFolder}/.env",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Frontend – React",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/frontend/src"
+    },
+    {
+      "name": "AI Engine – Python",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/ai-engine/api/ai_service.py"
+    }
+  ]
+}
