@@ -1,0 +1,7 @@
+# CivicPulse AI Code Ownership
+
+/frontend/      @frontend-lead
+/backend/       @backend-lead
+/ai-engine/     @ai-lead
+/data-platform/ @data-lead
+/docs/          @product-owner
