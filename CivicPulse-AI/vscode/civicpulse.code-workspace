@@ -1,0 +1,12 @@
+{
+  "folders": [
+    { "path": "frontend" },
+    { "path": "backend" },
+    { "path": "ai-engine" },
+    { "path": "data-platform" },
+    { "path": "docs" }
+  ],
+  "settings": {
+    "editor.formatOnSave": true
+  }
+}
