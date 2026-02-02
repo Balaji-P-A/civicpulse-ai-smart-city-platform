@@ -1,0 +1,23 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.env": true
+  },
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "eslint.validate": ["javascript", "typescript", "typescriptreact"],
+
+  "python.formatting.provider": "black",
+  "python.analysis.typeCheckingMode": "basic",
+
+  "terminal.integrated.defaultProfile.linux": "bash",
+
+  "git.autofetch": true,
+  "git.confirmSync": false
+}
